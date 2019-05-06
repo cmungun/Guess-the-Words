@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+  <head>
+
+    <title>App</title>
+    <link rel = "stylesheet"   type = "text/css"   href = "Index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src = "app.js" type="text/javascript"></script>
+  </head>
+  <body ng-app="App" ng-controller="Controller">
+
+  <div class = Guess> Guess the words:: {{displayWord}}</div>
+
+      <div class = GuessLeft>
+        Guesses left :: {{guessess}}
+      </div>
+      <div class = "Incorrect">
+        Words Not Correct ::
+        <span ng-repeat="Letter in Bad">
+          {{Letter}}
+        </span>
+      </div>
+      <div class= "correct">
+          Words Correct ::
+        <span ng-repeat="Letter in good">{{Letter}}</span>
+      </div>
+      <div class = Input> <input type="text" name="guess" ng-model = "input.letter">
+        <button ng-click= "letterChosen()">Submit</button> </div>
+
+
+
+  </body>
+</html>
